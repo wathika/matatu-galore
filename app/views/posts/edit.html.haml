@@ -1,4 +1,5 @@
 .form-wrapper
+  = image_tag @post.image.url(:medium), class: "img-responsive"
   = simple_form_for @post, html: { class: 'form-horizontal', multipart: true } do |f|
     .form-group
       = f.input :image

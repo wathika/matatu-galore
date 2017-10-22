@@ -19,7 +19,11 @@ class User < ApplicationRecord
       where(conditions.to_h).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).first
     elsif conditions.has_key?(:username) || conditions.has_key?(:email)
       conditions[:email].downcase! if conditions[:email]
-      where(conditions.to_h).first
+      if conditions[:username].nil?
+        where(conditions.to_h).first
+      else
+        where(username: conditions[:username]).first
+      end
     end
   end
 end

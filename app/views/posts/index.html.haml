@@ -1,26 +1,3 @@
 .posts-wrapper.row
   - @posts.each do |post|
-    .post
-      .post-head
-        .thumb-img
-        .user-name
-          = post.user.username
-      .image.center-block
-        = link_to (image_tag post.image.url(:medium), class:"img-responsive"), post_path(post)
-      .post-bottom
-        .caption
-          .user-name
-            = post.user.username
-          = post.caption
-        - if post.comments
-          - post.comments.each do |comment|
-            .comment
-              .user-name
-                = comment.user.username
-              .comment-content
-                = comment.content
-              - if comment.user == current_user
-                = link_to post_comment_path(post, comment), method: :delete, data: { confirm: "Are you sure?" }
-        .comment-form
-          = form_for [post, post.comments.new] do |f|
-            = f.text_field :content, placeholder: 'Add a comment...'
+    = render 'post', post: post

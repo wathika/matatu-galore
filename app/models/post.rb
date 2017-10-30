@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
   validates :image, presence: true
   validates :user_id, presence: true
+  validates :caption, length: { minimum: 3, maximum: 30 }
   belongs_to :user
   has_many :comments, dependent: :destroy
 

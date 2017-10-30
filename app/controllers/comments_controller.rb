@@ -27,7 +27,7 @@ class CommentsController < ApplicationController
         format.html { redirect_to root_path }
         format.js
       end
-
+    end
   end
 
   private

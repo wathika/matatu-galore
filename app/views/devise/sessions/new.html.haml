@@ -9,10 +9,10 @@
               .form-inputs
                 .form-group
                   = f.input :login, required: false, autofocus: true, label: false do
-                    = f.text_field :login, class: "form-control input-lg", placeholder: "User Name or Email"
+                    = f.input_field :login, class: "form-control input-lg", placeholder: "User Name or Email"
                 .form-group
                   = f.input :password, required: false, label: false do
-                    = f.text_field :password, class: "form-control input-lg", placeholder: "Password"
+                    = f.input_field :password, class: "form-control input-lg", placeholder: "Password"
                 .form-group
                   = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
               .form-actions

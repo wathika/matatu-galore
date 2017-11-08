@@ -18,7 +18,8 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 
 
-#
+#kaminari gem for pagination
+gem 'kaminari', '~> 1.1'
 #using Haml instead of erb
 gem 'haml'
 

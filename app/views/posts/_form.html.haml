@@ -2,7 +2,7 @@
   .post
     .post-body
       .image-wrap
-        
+        = image_tag '', id: 'image-preview', class: 'img-responsive'
         = simple_form_for @post, html: { class: 'form-horizontal', multipart: true } do |f|
           .row
             .col-md-12.text-center
@@ -10,7 +10,7 @@
           .container-fluid
             .form-group.text-center
               %h4 Upload an image (this is required):
-              = f.input :image
+              = f.input :image, label: false, input_html: { onChange: 'loadFile(event)' }
             .form-group.text-center
               = f.input :caption, label: false do
                 = f.input_field :caption, class: "form-control", placeholder: "Caption this..."

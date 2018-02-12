@@ -13,6 +13,9 @@ class User < ApplicationRecord
   # Only allow letter, number, underscore and punctuation.
   validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
 
+  has_attached_file :avatar, styles: { medium: "152x152#" }
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
+
   #overwrite find_for_database_authentication method
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup

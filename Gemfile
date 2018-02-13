@@ -37,6 +37,9 @@ gem 'jquery-rails', '~> 4.3'
 #use devise to handle users
 gem 'devise', '~> 4.3'
 
+#handles like/unlike and likes
+gem 'acts_as_votable', '~> 0.10.0'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

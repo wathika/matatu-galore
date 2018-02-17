@@ -5,6 +5,7 @@ class User < ApplicationRecord
 
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :notifications, dependent: :destroy
 
   # Virtual attribute for authenticating by either username or email
   # This is in addition to a real persisted field like 'username'

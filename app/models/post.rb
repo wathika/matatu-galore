@@ -5,6 +5,7 @@ class Post < ApplicationRecord
   validates :caption, length: { minimum: 3, maximum: 30 }
   belongs_to :user
   has_many :comments, dependent: :destroy
+  has_many :notifications, dependent: :destroy
 
   has_attached_file :image, styles: { :medium => "640x" }
 

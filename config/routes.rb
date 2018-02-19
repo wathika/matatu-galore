@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'notifications/:id/link_through', to: 'notifications#link_through', as: 'link_through'
   get 'notifications', to: 'notifications#index'
 
+  get 'browse', to: 'posts#browse', as: 'browse_posts'
+
   devise_for :users
   resources :posts do
     resources :comments

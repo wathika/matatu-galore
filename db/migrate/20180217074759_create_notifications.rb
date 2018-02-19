@@ -12,6 +12,6 @@ class CreateNotifications < ActiveRecord::Migration[5.1]
     end
     add_foreign_key :notifications, :users
     add_foreign_key :notifications, :users, column: :notified_by_id
-    add_foreign_key :notifications, :post
+    add_foreign_key :notifications, :posts
   end
 end

@@ -39,6 +39,9 @@ gem 'simple_form'
 #for image upload
 gem "paperclip", "~> 6.0.0"
 
+#sass powered-bootstrap 3
+gem 'bootstrap-sass', '~> 3.3'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
